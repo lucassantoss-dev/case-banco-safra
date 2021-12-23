@@ -1,0 +1,115 @@
+ /**Plano de fundo*/
+body{
+    background-image: url("../assets/marvelBackground.gif");
+}
+
+ /**Inicio da view de herois */
+.card {
+    margin: 20px;
+    margin-left: 125px;
+}
+
+.search {
+  color: white;
+}
+.row {
+    margin:auto;
+    max-width: 1000px;
+    color: black;
+}
+
+hr {
+    color: antiquewhite;
+}
+
+h1 {
+    margin:auto;
+    max-width: 950px;
+    color: blanchedalmond;
+}
+
+.siteHeader {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .logo {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  
+  .nav { text-align: right; }
+  
+  .nav li {
+    display: inline;
+    line-height: 4;
+    margin-left: 25px;
+  }
+  .nav li:first-of-type {
+    margin-left: 0;
+  }
+  
+  .masthead {
+    background-color: #eee;
+    padding: 50px 0;
+  }
+  @media (min-width: 48em) {
+    .masthead {
+      padding: 100px 0;
+    }
+  }
+  
+  .masthead-title {
+    margin-top: 0;
+  }
+  
+  .siteContent {
+    padding: 50px 0;
+  }
+  .siteFooter {
+    color: antiquewhite;
+    border-top: 1px solid #eee;
+    font-size: .875em;
+    padding-top: 15px;
+  }
+  
+  .ico-content {
+      float: left;
+      padding: 20px;
+  }
+  
+  .opt-content {
+    max-width: 60%;
+    float: left;
+  }
+ /**Fim da view de herois */
+
+/**Inicio da view de detalhes do heroi */
+
+  .specs {
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    margin-bottom: 10%;
+    margin-left: 280px;
+  }
+  
+  .specs dt {
+    font-weight: bold;
+  }
+  
+  .specs > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+  }
+  
+  .specs > li > span {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .title1{
+    margin-left: 280px;
+  }
+/**Fim da view de detalhes do heroi */

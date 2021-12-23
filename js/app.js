@@ -1,6 +1,6 @@
 var App 		= angular.module('App', ['ngRoute','ngSanitize']);
 //Set url service app
-var serviceApi		= 'http://gateway.marvel.com/v1/public/characters';
+var serviceApi		= 'https://gateway.marvel.com/v1/public/characters';
 var GetServiceApi	= serviceApi;
 
 App.run(function($rootScope, appService) {

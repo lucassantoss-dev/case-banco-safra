@@ -2,6 +2,7 @@ var App 		= angular.module('App', ['ngRoute','ngSanitize']);
 //Set url service app
 var serviceApi		= 'https://gateway.marvel.com/v1/public/characters';
 var GetServiceApi	= serviceApi;
+var complemento		= '?ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479';
 
 App.run(function($rootScope, appService) {
 	
@@ -12,7 +13,7 @@ App.run(function($rootScope, appService) {
 	} 
 	
 	if(typeof $rootScope.setting === 'undefined'){
-		appService.HttpRequest('GET',GetServiceApi+'?ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479').success(function(data) {
+		appService.HttpRequest('GET',GetServiceApi + complemento).success(function(data) {
 			$rootScope.setting 		= data;
 		});
 	}

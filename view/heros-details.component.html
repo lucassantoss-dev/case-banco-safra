@@ -22,6 +22,9 @@
                 <dd>{{results.description}}</dd>
             </dl>
         </li>
+        <li ng-repeat="results in requestData">
+            <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
+        </li>
     </ul>
 </di>
 <!--Fim de historia do heroi-->

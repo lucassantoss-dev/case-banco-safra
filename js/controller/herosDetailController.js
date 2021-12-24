@@ -2,6 +2,7 @@ App.controller('herosDetailController', function ($scope, $rootScope, $routePara
 	$scope.serviceApi = serviceApi;
     $rootScope.appTitle	 	= $routeParams.title;
 	$scope.GetServiceApi = GetServiceApi;
+	var complemento		= '?ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479';
 
     var requestParams = {
 		"id": $routeParams.id
@@ -12,12 +13,12 @@ App.controller('herosDetailController', function ($scope, $rootScope, $routePara
 	}
 
 	$rootScope.goReload = function () {
-		appService.HttpRequest('GET', GetServiceApi + '/' + requestParams, '?ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479').success(function (data) {
+		appService.HttpRequest('GET', GetServiceApi + '/' + complemento, requestParams).success(function (data) {
 			$scope.requestData = data.data.results;
 		});
 	}
 
-	appService.HttpRequest('GET', GetServiceApi + '/' + requestParams.id + '?ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479').success(function (data) {
+	appService.HttpRequest('GET', GetServiceApi + '/' + requestParams.id + complemento).success(function (data) {
 		$scope.requestData = data.data.results;
 	});
 });

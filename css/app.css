@@ -56,11 +56,6 @@ h1 {
     background-color: #eee;
     padding: 50px 0;
   }
-  @media (min-width: 48em) {
-    .masthead {
-      padding: 100px 0;
-    }
-  }
   
   .masthead-title {
     margin-top: 0;
@@ -89,16 +84,19 @@ h1 {
 
 /**Inicio da view de detalhes do heroi */
 
-  .specs {
+  .details {
     clear: both;
     list-style: none;
     margin: 0;
     padding: 0;
     color: white;
     margin-bottom: 10%;
-    margin-left: 200px;
   }
-  
+
+  .specs {
+    width: 70%;
+  }
+
   .specs dt {
     font-weight: bold;
   }
@@ -113,7 +111,17 @@ h1 {
     font-size: 1.2em;
     font-weight: bold;
   }
-  .title1{
-    margin-left: 280px;
-  }
 /**Fim da view de detalhes do heroi */
+
+/**Media Query */
+@media (max-width: 600px) {
+  .specs > li > span, .details, .history {
+    width: 100%;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 800px) {
+  .masthead {
+    padding: 100px 0;
+  }
+}

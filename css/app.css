@@ -4,6 +4,10 @@ body{
 }
 
  /**Inicio da view de herois */
+.bar-header-secondary ~ .content {
+  padding-top: 100px;
+}
+
 .card {
     margin: 20px;
     margin-left: 125px;

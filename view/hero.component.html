@@ -1,34 +1,31 @@
-<!--Titulo do site-->
-<header container class="siteHeader">
-    <div class="row">
-        <h1 column=4 class="logo">
-    <h1>Heros</h1>
-  </h1>
-    </div>
-</header>
-<br>
-<!--Barra de Search-->
-<div class="bar bar-standard bar-header-secondary">
-    <form>
-        <input ng-keyup="getSearch($event)" ng-model="requestSearch" type="search" placeholder="Search Hero">
-    </form>
-</div>
-<hr>
-<!--Fim da Barra de Search-->
-<div>
-
-</div>
-
-<!--Inicio do Card-->
-<div class="row">
-    <div class="card" style="width: 18rem;" id="c1" ng-controller="heroController"  ng-repeat="results in requestData || requestSearch">
-        <a href="#hero/{{results.id}}">
-            <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h4 id="n1" class="card-title">{{results.name}}</h4>
-            <h5 class="card-title" id="cod1">{{results.id}}</h5>
+<div class="container">
+    <!--Titulo do site-->
+    <header container class="siteHeader">
+        <div class="row">
+            <h1 column=4 class="logo">
+        <h1>Heros</h1>
+      </h1>
         </div>
+    </header>
+    <br>
+    <!--Barra de Search-->
+    <div class="row">
+        <input type="text" ng-model="busca" placeholder="Pesquisar Heroi">
+    </div>
+    <hr>
+    <!--Fim da Barra de Search-->
+
+    <!--Inicio do Card-->
+    <div class="row">
+        <div class="card" style="width: 18rem;" id="c1" ng-controller="heroController"  ng-repeat="results in requestData | filter:busca">
+            <a href="#hero/{{results.id}}">
+                <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h4 id="n1" class="card-title">{{results.name}}</h4>
+                <h5 class="card-title" id="cod1">{{results.id}}</h5>
+            </div>
+          </div>
       </div>
-  </div>
-<!--Fim do card-->
+    <!--Fim do card-->
+</div>

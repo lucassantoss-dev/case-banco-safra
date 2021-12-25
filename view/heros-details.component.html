@@ -1,30 +1,34 @@
-<!--Inicio de historia do heroi-->
-<di class="details">
-    <div class="hero-image">
-        <img ng-src="" class="hero" ng-class="{selected: name === $results.name}"
-            ng-repeat="name in $results.name" 
-            ng-class="{selected: name === $results.name}"/>
-    </div>
-
-    <h1 class="title1">Descrição do Heroi</h1>
-    <br>
-
-    <ul class="specs">
-        <li>
-            <span>Heroi: </span>
-            <dl>
-                <dd ng-repeat="results in requestData">{{results.name}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>História</span>
-            <dl ng-repeat="results in requestData">
-                <dd>{{results.description}}</dd>
-            </dl>
-        </li>
-        <li ng-repeat="results in requestData">
-            <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
-        </li>
-    </ul>
-</di>
-<!--Fim de historia do heroi-->
+<div class="container">
+    <!--Inicio de historia do heroi-->
+    <di class="details">
+        <h1 class="title1">Descrição do Heroi</h1>
+        <br>
+    
+        <ul class="specs">
+            <li>
+                <span>Heroi: </span>
+                <dl>
+                    <dd ng-repeat="results in requestData">{{results.name}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Descrição</span>
+                <dl ng-repeat="results in requestData">
+                    <dd>{{results.description}}</dd>
+                </dl>
+            </li>
+            <li ng-repeat="results in requestData">
+                <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
+            </li>
+        </ul>
+        <ul class="specs">
+            <li>
+                <span>História</span>
+                <dl ng-repeat="results in requestData">
+                    <dd>{{results.stories.items}}</dd>
+                </dl>
+            </li>
+        </ul>
+    </di>
+    <!--Fim de historia do heroi-->
+</div>

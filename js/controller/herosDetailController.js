@@ -18,7 +18,7 @@ App.controller('herosDetailController', function ($scope, $rootScope, $routePara
 		});
 	}
 
-	appService.HttpRequest('GET', GetServiceApi + '/' + requestParams.id + complemento).success(function (data) {
+	appService.HttpRequest('GET', GetServiceApi + '/' + requestParams.id +  complemento).success(function (data) {
 		$scope.requestData = data.data.results;
 	});
 });

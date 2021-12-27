@@ -20,6 +20,7 @@ body{
     margin:auto;
     max-width: 1000px;
     color: black;
+    font-size: 1.2em;
 }
 
 hr {
@@ -105,11 +106,16 @@ h1 {
     display: inline-block;
     vertical-align: top;
     width: 200px;
+    font-size: 1em;
   }
   
   .specs > li > span {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: bold;
+  }
+  .card-img-top {
+    margin-left: 20px;
+    width: 90%;
   }
 /**Fim da view de detalhes do heroi */
 
@@ -119,7 +125,7 @@ h1 {
   .masthead {
     padding: 100px 0;
   }
-  .specs > li > span, .details, .history {
+  .specs > li > span, .details, .history, .card-img-top {
     width: 100%;
   }
 }

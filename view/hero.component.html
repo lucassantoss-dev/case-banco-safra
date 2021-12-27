@@ -3,8 +3,8 @@
     <header container class="siteHeader">
         <div class="row">
             <h1 column=4 class="container">
-        <h1>Heros</h1>
-      </h1>
+                <h1>Heros</h1>
+            </h1>
         </div>
     </header>
     <br>
@@ -12,19 +12,21 @@
     <p>
         <input class="w3-input" type="text" ng-model="busca" placeholder="Pesquisar Heroi">>
     <p>
-    <!--Fim da Barra de Search-->
+        <!--Fim da Barra de Search-->
 
-    <!--Inicio do Card-->
+        <!--Inicio do Card-->
     <div class="row">
-        <div class="card" style="width: 18rem;" id="c1" ng-controller="heroController"  ng-repeat="results in requestData | filter:busca">
+        <div class="card" style="width: 18rem;" id="c1"
+            ng-repeat="results in requestData | filter:busca">
             <a href="#hero/{{results.id}}">
-                <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
+                <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg"
+                    alt="Card image cap">
             </a>
             <div class="card-body">
                 <h4 id="n1" class="card-title">{{results.name}}</h4>
                 <h5 class="card-title" id="cod1">{{results.id}}</h5>
             </div>
-          </div>
-      </div>
+        </div>
+    </div>
     <!--Fim do card-->
 </div>

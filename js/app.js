@@ -34,7 +34,3 @@ App.config(function($routeProvider) {
 		$routeProvider.otherwise({redirectTo: '/'});
 });
 
-//navCtrl definition
-App.controller('navCtrl', function($scope, $route) {
-    $scope.$route = $route;
-});

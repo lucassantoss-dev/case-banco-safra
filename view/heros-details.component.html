@@ -11,9 +11,12 @@
                     <dd ng-repeat="results in requestData">{{results.name}}</dd>
                 </dl>
             </li>
-            <li>
+            <li class="mr-1">
                 <span>Descrição</span>
-                <dl ng-repeat="results in requestData">
+                <dl ng-repeat="results in requestData" ng-if="!results.description">
+                    <p>Não há descrição do Heroi</p>
+                </dl>
+                <dl ng-repeat="results in requestData" ng-if="results.description">
                     <dd>{{results.description}}</dd>
                 </dl>
             </li>

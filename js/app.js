@@ -31,6 +31,7 @@ App.config(function($routeProvider) {
             controller: 'herosDetailController',
 			activePage: 'hero'
     	})
+		$routeProvider.otherwise({redirectTo: '/'});
 });
 
 //navCtrl definition

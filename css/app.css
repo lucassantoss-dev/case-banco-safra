@@ -114,14 +114,12 @@ h1 {
 /**Fim da view de detalhes do heroi */
 
 /**Media Query */
-@media (max-width: 600px) {
-  .specs > li > span, .details, .history {
-    width: 100%;
-  }
-}
 
 @media (min-width: 48em) and (max-width: 800px) {
   .masthead {
     padding: 100px 0;
+  }
+  .specs > li > span, .details, .history {
+    width: 100%;
   }
 }

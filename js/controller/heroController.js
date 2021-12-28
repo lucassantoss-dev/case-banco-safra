@@ -22,11 +22,6 @@ App.controller('heroController', function ($scope, $rootScope, appService, $loca
 		});
 	}
 
-	$scope.isActive = function (hero) {
-		var active = (hero === $location.path());
-		return active;
-   };
-
 	appService.HttpRequest('GET', GetServiceApi + offset + complemento).success(function (data) {
 		$scope.requestData = data.data.results;
 	});

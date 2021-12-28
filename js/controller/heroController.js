@@ -1,4 +1,9 @@
-App.controller('heroController', function ($scope, $rootScope, appService) {
+App.controller('heroController', function ($scope, $rootScope, appService, $location) {
+	//Descrição de chamadas da API
+	var ts = 1640199267;
+	var apikey = '5a237863b3cc2061003cbbc4fe20dc06';
+	var hash = '4f9e92d166e63ca77eb9a2110d8bf479';
+	//Serviços de chamada
 	var serviceApi = 'https://gateway.marvel.com/v1/public/characters';
 	var GetServiceApi = serviceApi + '?limit=9&offset=';
 	var complemento		= '&ts=1640199267&apikey=5a237863b3cc2061003cbbc4fe20dc06&hash=4f9e92d166e63ca77eb9a2110d8bf479';
@@ -16,6 +21,11 @@ App.controller('heroController', function ($scope, $rootScope, appService) {
 			$rootScope.loading = false;
 		});
 	}
+
+	$scope.isActive = function (hero) {
+		var active = (hero === $location.path());
+		return active;
+   };
 
 	appService.HttpRequest('GET', GetServiceApi + offset + complemento).success(function (data) {
 		$scope.requestData = data.data.results;

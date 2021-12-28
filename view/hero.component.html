@@ -18,7 +18,7 @@
     <div class="row">
         <div class="card" style="width: 18rem;" id="c1"
             ng-repeat="results in requestData | filter:busca">
-            <a href="#hero/{{results.id}}">
+            <a href="#hero/{{results.id}}" ng-class="{active: $route.current.activePage == 'hero'}">
                 <img id="i1" class="card-img-top img-thumbnail" src="{{results.thumbnail.path}}/portrait_xlarge.jpg"
                     alt="Card image cap">
             </a>
